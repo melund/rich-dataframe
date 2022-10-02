@@ -21,7 +21,6 @@
 import time
 import pandas as pd
 from contextlib import contextmanager
-from rich import print
 try:
     from rich import print
 except ImportError:
