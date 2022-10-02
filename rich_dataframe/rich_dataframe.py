@@ -3,13 +3,16 @@
 # Building it in because it is small and hasn't been updated much in a while &
 # most importantly because I want to customize how it handles the captioning.
 # SPECIFIC CUSTOMIZATIONS:
-#-------------------------
+ #-------------------------
 # I don't want the caption describing how many rows or cols shown unless number 
 # of rows or columns is larger than how many are shown.
 # Plus, adding note to install rich.
 # Plus, removing the animation to the 'beat' because it causes weird spacing
-# in Juputer and I had already turned the speed up so high because I wasn't
-# interested in the animated aspect the default rich-dataframe makes.
+# in Jupyter and I had already turned the speed up so high because I wasn't
+# interested in the animated aspect the default rich-dataframe makes. However,
+# I found you still need to install the default `rich-dataframe` into the
+# environment because otherwise using `%run` to execute the script in the
+# notebook fails.
 # Plus, removed `_change_width()` section since I'm not seeing a difference
 # without it when not running animation.
 #-------------------------
