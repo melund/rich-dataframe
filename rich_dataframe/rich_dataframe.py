@@ -24,6 +24,26 @@
 # https://stackoverflow.com/a/72747970/8508004 , but better because header 
 # handled by rich-dataframe.
 #-------------------------
+# Development/Trouble-shooting cycle that worked best for developing my
+# custom implementation:
+# Starting a MyBinder session from 
+# https://github.com/binder-examples/requirements and installing only `rich`
+# and then runningan edited version of `example.py` from 
+# https://github.com/fomightez/rich-dataframe allowed me to see I shouldn't 
+# need `rich-dataframe` installed to get run `%run example.py` to show the 
+# output in a JupyterLab cell. EDITS: `example.py` had the entire 
+# `rich-datadame.py` contents placed in it. I also changed what data it uses
+# because it was annoying to get the large data it used and I wanted a 
+# dataframe I was familiar with. I used the iris dataset that's built into 
+# seaborn, see 
+# https://github.com/mwaskom/seaborn-data . `iris = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')` or 
+# !curl -OL https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv 
+# can be used to use it with pandas or get it, respecitivey.  
+# I didn't want to install seaborn to keep things simple in the session. Note that 
+# `rich-dataframe` didn't seem to disply `iris` dataframe with the settings 
+# in `example.py`  and so I further changed `example.py` to remove
+# the reference to `first_rows` and `first_cols=False`.
+#-------------------------
 # Adding this in this section of my script so only need rich installed if
 # using command line. Use of the main function directly wouldn't necessarily
 # need the code handling printng the dataframe in the terminal and so best
