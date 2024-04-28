@@ -64,6 +64,7 @@ from rich.console import Console
 from rich.live import Live
 from rich.measure import Measurement
 from rich.table import Table
+import pandas as pd
 console = Console()
 COLORS = ["cyan", "magenta", "red", "green", "blue", "purple"]
 class DataFramePrettify:
